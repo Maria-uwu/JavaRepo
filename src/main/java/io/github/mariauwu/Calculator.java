@@ -1,3 +1,6 @@
+package io.github.mariauwu;
+
+
 public class Calculator {
     // Método para sumar dos números
     public static double sumar(double a, double b) {

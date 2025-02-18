@@ -60,5 +60,11 @@ pipeline {
                 }
             }
         }
+        stage('Run Tests') {
+            steps {
+                sh 'mvn test'
+    }
+}
+
     } // Cierra "stages"
 } // Cierra "pipeline"
