@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Compilar Aplicación') {
             steps {
-                sh 'javac Calculator/*.java' // Compila todas las clases dentro de Calculator
-            }
+                sh 'ls -la'  // Para ver los archivos disponibles en Jenkins
+                sh 'javac Calculator.java' // Compila el archivo correctamente            }
         }
         stage('Ejecutar Aplicación') {
             steps {
