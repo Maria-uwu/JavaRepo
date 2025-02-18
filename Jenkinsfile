@@ -42,8 +42,7 @@ pipeline {
 
         stage('Compilar Aplicación') {
             steps {
-                sh 'ls -la'  // Para ver los archivos disponibles en Jenkins
-                sh 'javac Calculator.java' // Asegura que el archivo se compila correctamente
+                sh 'javac -d target src/main/java/io/github/mariauwu/*.java'
             }
         }
 
