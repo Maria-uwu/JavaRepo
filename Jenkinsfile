@@ -1,6 +1,37 @@
 pipeline {
     agent any
 
+
+    triggers {
+        cron('* * * * *')  // Ejecuta el pipeline cada minuto
+    }
+
+    environment {
+        NUM_FILE = "/tmp/number.txt"
+    }
+
+    stages {
+        stage('Imprimir Número') {
+            steps {
+                script {
+                    def num = 1
+
+                    // Si el archivo existe, leer el número actual
+                    if (fileExists(env.NUM_FILE)) {
+                        num = readFile(env.NUM_FILE).trim().toInteger() + 1
+                    }
+
+                    // Imprimir número en la consola
+                    echo "Número actual: ${num}"
+
+                    // Guardar el nuevo número para la próxima ejecución
+                    writeFile(file: env.NUM_FILE, text: "${num}")
+                }
+            }
+        }
+    }
+
+
     stages {
         stage('Clonar Repositorio') {
             steps {
