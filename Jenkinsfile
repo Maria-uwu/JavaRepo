@@ -2,9 +2,9 @@ pipeline {
     agent any
 
 
-    triggers {
+    /*triggers {
         cron('* * * * *')  // Ejecuta el pipeline cada minuto
-    }
+    }*/
 
     environment {
         NUM_FILE = "/tmp/number.txt"
