@@ -64,6 +64,12 @@ pipeline {
                 sh 'mvn test'
     }
 }
+        stage('Compilar y Testear') {
+            steps {
+                sh 'mvn clean test'
+    }
+}
+
 
     } // Cierra "stages"
 } // Cierra "pipeline"
