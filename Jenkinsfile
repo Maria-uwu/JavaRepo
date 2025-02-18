@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clonar Repositorio') {
             steps {
-                git 'https://github.com/Maria-uwu/JavaRepo'
+                git branch: 'main', url: 'https://github.com/Maria-uwu/JavaRepo'
             }
         }
         stage('Compilar Aplicación') {
