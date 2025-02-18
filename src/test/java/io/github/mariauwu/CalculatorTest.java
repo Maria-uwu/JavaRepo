@@ -9,6 +9,7 @@ public class CalculatorTest {
     void testSuma() {
         Calculator calc = new Calculator();
         double resultado = calc.sumar(2, 3);
+        System.out.println("Resultado de la suma: " + resultado);
         assertEquals(5, resultado, "La suma de 2 + 3 debería ser 5");
     }
 
@@ -16,6 +17,7 @@ public class CalculatorTest {
     void testResta() {
         Calculator calc = new Calculator();
         double resultado = calc.restar(5, 2);
+        System.out.println("Resultado de la resta: " + resultado);
         assertEquals(3, resultado, "La resta de 5 - 2 debería ser 3");
     }
 }
