@@ -10,6 +10,10 @@ pipeline {
         NUM_FILE = "/tmp/number.txt"
     }
 
+    tools {
+        maven 'Maven3'
+}
+
 
 
 
