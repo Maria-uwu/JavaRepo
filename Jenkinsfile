@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Compilar Aplicación') {
             steps {
-                sh 'javac Main.java'
+                sh 'javac Calculator.java'
             }
         }
         stage('Ejecutar Aplicación') {
             steps {
-                sh 'java Main'
+                sh 'java Calculator'
             }
         }
     }
