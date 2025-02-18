@@ -21,10 +21,17 @@ public class CalculatorTest {
         assertEquals(3, resultado, "La resta de 5 - 2 debería ser 3");
     }
     @Test
-    void testMultiplica() {
+    void testMultiplicacion() {
         Calculator calc = new Calculator();
         double resultado = calc.multiplicar(5, 2);
         System.out.println("Resultado de la multiplicacion: " + resultado);
         assertEquals(10, resultado, "La multiplicacion de 5 * 2 debería ser 10");
+    }
+    @Test
+    void testDivision() {
+        Calculator calc = new Calculator();
+        double resultado = calc.dividir(10, 2);
+        System.out.println("Resultado de la division: " + resultado);
+        assertEquals(5, resultado, "La division de 10 / 2 debería ser 5");
     }
 }
