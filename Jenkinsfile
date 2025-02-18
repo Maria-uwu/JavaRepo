@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Compilar Aplicación') {
             steps {
-                sh 'javac Calculator.java'
+                sh 'javac Calculator/*.java' // Compila todas las clases dentro de Calculator
             }
         }
         stage('Ejecutar Aplicación') {
             steps {
-                sh 'java Calculator'
+                sh 'java Calculator' // Ejecuta la clase principal
             }
         }
     }
