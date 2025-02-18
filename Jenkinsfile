@@ -16,5 +16,12 @@ pipeline {
                 sh 'java Calculator' // Ejecuta la clase principal
             }
         }
+        stage('Configurar Git') {
+            steps {
+                script {
+                    env.PATH = "/usr/bin:/usr/local/bin:$PATH"
+        }
+    }
+}
     }
 }
