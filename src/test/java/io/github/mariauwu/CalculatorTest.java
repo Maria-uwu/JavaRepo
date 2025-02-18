@@ -20,4 +20,11 @@ public class CalculatorTest {
         System.out.println("Resultado de la resta: " + resultado);
         assertEquals(3, resultado, "La resta de 5 - 2 debería ser 3");
     }
+    @Test
+    void testMultiplica() {
+        Calculator calc = new Calculator();
+        double resultado = calc.multiplicar(5, 2);
+        System.out.println("Resultado de la multiplicacion: " + resultado);
+        assertEquals(10, resultado, "La multiplicacion de 5 * 2 debería ser 10");
+    }
 }
