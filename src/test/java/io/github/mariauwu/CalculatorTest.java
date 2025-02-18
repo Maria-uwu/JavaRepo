@@ -8,7 +8,7 @@ public class CalculatorTest {
     @Test
     void testSuma() {
         Calculator calc = new Calculator();
-        double resultado = calc.sumar(2, 3);
+        double resultado = calc.restar(2, 3);
         System.out.println("Resultado de la suma: " + resultado);
         assertEquals(5, resultado, "La suma de 2 + 3 debería ser 5");
     }
