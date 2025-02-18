@@ -14,6 +14,12 @@ pipeline {
         maven 'Maven 3'
 }
 
+    post {
+        always {
+            junit '**/target/surefire-reports/*.xml'
+    }
+}
+
 
 
 
